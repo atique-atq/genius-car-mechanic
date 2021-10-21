@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 const useFirebase = () => {
-    const [users, setUsers] = useState({});
+    const [user, setUsers] = useState({});
 
     const auth = getAuth();
 
@@ -34,8 +34,10 @@ const useFirebase = () => {
     }
 
     return {
-        users,
+        user,
         signInUsingGoogle,
         logOut
     }
 }
+
+export default useFirebase; 
